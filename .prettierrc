@@ -1,0 +1,17 @@
+{
+    "useTabs": false,
+    "space": 4,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "jsxSingleQuote": false,
+    "semi": true,
+    "quoteProps": "as-needed",
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "endOfLine": "auto",
+    "spaceBeforeFunctionParen": true,
+    "trailingSemicolon": true,
+    "importOrder": ["^react$", "^[./]"],
+    "alignJSX": "auto"
+  }
+  
