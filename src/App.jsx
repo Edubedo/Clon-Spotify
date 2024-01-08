@@ -8,9 +8,9 @@ import Error404 from './pages/base/Error404/Error404.jsx';
 
 // Auth
 import Register from './pages/auth/register/Register.jsx'
-import Login from './pages/auth/Login/Login.jsx'
-import Restore from './pages/auth/Restore/Restore.jsx'
-import Success from './pages/auth/Success/Success.jsx'
+import Login from './pages/auth/login/Login.jsx'
+import Restore from './pages/auth/restore/Restore.jsx'
+import Success from './pages/auth/success/Success.jsx'
 
 // Dashboard
 import Dashboard from './pages/dashboard/Dashboard.jsx'
@@ -19,7 +19,7 @@ import Playlist from './pages/dashboard/playlist/Playlist.jsx'
 // Profile
 import Profile from './pages/profile/Profile.jsx'
 import Settings from './pages/profile/settings/Settings.jsx'
-import Likes from './pages/profile/Likes/Likes.jsx'
+import Likes from './pages/profile/likes/Likes.jsx'
 import Notifications from './pages/profile/notifications/Notifications.jsx'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
