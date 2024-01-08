@@ -1,0 +1,15 @@
+/* Footer.css */
+
+.song-info {
+  animation: slideRightToLeft 8s linear infinite; /* Definición de la animación */
+}
+
+
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(100%); /* Comienza fuera del contenedor, hacia la derecha */
+  }
+  100% {
+    transform: translateX(-100%); /* Termina fuera del contenedor, hacia la izquierda */
+  }
+}
