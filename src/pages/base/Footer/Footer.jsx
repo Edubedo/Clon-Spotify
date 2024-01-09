@@ -3,13 +3,25 @@ import './Footer.css';
 import Song from './components/Song';
 import BotonesManejadoresCanciones from './components/BotonesManejadoresCanciones';
 import LogoAlbumTheDoors from '../../../assets/images/album/theDoors2.jpg';
+<<<<<<< HEAD
 import CancionMp3 from '../../../assets/audios/lightMyFire.mp3'
+=======
+import DetailsSong from './components/DetailsSong';
+>>>>>>> 8466f2b4dc421eec6b5c417c7e61058b1b4bc284
 
 function Footer() {
   const [like, setLike] = useState(false); // Estado para el botón de like
   const [shuffle, setShuffle] = useState(false); // Estado para el botón de shuffle
   const [loop, setLoop] = useState(false); // Estado para el botón de lOOP
   const [listening, setListening] = useState(false); // Estado para el botón de Listen
+
+  const [playingVideo, setPlayingVideo] = useState(false);
+  const [displayVideo, setDisplayVideo] = useState(false);
+  const [lyrics, setLyrics] = useState(false);
+  const [queue, setQueue] = useState(false);
+  const [device, setDevice] = useState(false);
+  const [sound, setSound] = useState(false);
+  const [screen, setScreen] = useState(false);
 
   const cancionTheDoors = {
     mp3: CancionMp3,
@@ -20,7 +32,15 @@ function Footer() {
     listening: listening,
     shuffle: shuffle,
     loop: loop,
-    like: like // Usar el estado local para manejar el like/dislike
+
+    playingVideo: playingVideo,
+    displayVideo: displayVideo,
+    lyrics: lyrics,
+    queue: queue,
+    device: device,
+    sound: sound,
+    loop: loop,
+    screen: screen // Usar el estado local para manejar el like/dislike
   };
   return (
     <footer className="bottom-0 z-[200] sticky bottom-0 left-0 w-full h-20 bg-principal-4 p-3 bg-[#030202] w-[100%]">
@@ -35,7 +55,15 @@ function Footer() {
           setListening={setListening}
         />
         {/* Buttons Detail Song */}
-        <div>Songs</div>
+        <DetailsSong
+          cancionTheDoors={cancionTheDoors}
+          setDisplayVideo={setDisplayVideo}
+          setLyrics={setLyrics}
+          setQueue={setQueue}
+          setDevice={setDevice}
+          setSound={setSound}
+          setScreen={setScreen}
+        />
       </div>
     </footer>
   );
