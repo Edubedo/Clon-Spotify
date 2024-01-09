@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { IoMdAddCircleOutline } from 'react-icons/io';
-import LogoAlbumTheDoors from '../../../../assets/images/album/theDoors2.jpg';
 
-function Song() {
-  const [like, setLike] = useState(false); // Estado para el botón de like
-
-  const cancionTheDoors = {
-    img: LogoAlbumTheDoors,
-    name: 'Light my fire',
-    band: 'The doors',
-    duration: 3.29,
-    like: like // Usar el estado local para manejar el like/dislike
-  };
+function Song({cancionTheDoors, setLike}) {
 
   return (
     <div className="flex">
@@ -34,7 +24,6 @@ function Song() {
               <button
                 onClick={() => {
                   setLike(false); // Actualizar el estado de like a false
-                  console.log('dislike');
                 }}
               >
                 <FaCheckCircle className="text-green-400 text-[18px] ml-6 cursor-pointer" />
