@@ -4,20 +4,14 @@ import { FaBackwardStep } from 'react-icons/fa6';
 import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
 import { BsArrowRepeat } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
-<<<<<<< HEAD
-=======
 import ReactAudioPlayer from 'react-audio-player';
 
->>>>>>> 8466f2b4dc421eec6b5c417c7e61058b1b4bc284
 function BotonesManejadoresCanciones({
   cancionTheDoors,
   setShuffle,
   setLoop,
   setListening
 }) {
-<<<<<<< HEAD
-    
-=======
   const [currentTime, setCurrentTime] = useState(0); // Estado para el tiempo actual de la canción
 
   const handleListen = e => {
@@ -26,7 +20,6 @@ function BotonesManejadoresCanciones({
 
   // Eliminar el listener al desmontar el componente
 
->>>>>>> 8466f2b4dc421eec6b5c417c7e61058b1b4bc284
   return (
     <div>
       <ReactAudioPlayer
@@ -137,4 +130,3 @@ function ManejadorTiempo({ currentTime }) {
 }
 
 export default BotonesManejadoresCanciones;
-

@@ -3,11 +3,7 @@ import './Footer.css';
 import Song from './components/Song';
 import BotonesManejadoresCanciones from './components/BotonesManejadoresCanciones';
 import LogoAlbumTheDoors from '../../../assets/images/album/theDoors2.jpg';
-<<<<<<< HEAD
-import CancionMp3 from '../../../assets/audios/lightMyFire.mp3'
-=======
 import DetailsSong from './components/DetailsSong';
->>>>>>> 8466f2b4dc421eec6b5c417c7e61058b1b4bc284
 
 function Footer() {
   const [like, setLike] = useState(false); // Estado para el botón de like
@@ -24,7 +20,6 @@ function Footer() {
   const [screen, setScreen] = useState(false);
 
   const cancionTheDoors = {
-    mp3: CancionMp3,
     img: LogoAlbumTheDoors,
     name: 'Light my fire',
     band: 'The doors',
