@@ -8,17 +8,23 @@ import { GoDotFill } from 'react-icons/go';
 function BotonesManejadoresCanciones({
   cancionTheDoors,
   setShuffle,
+  setLoop,
   setListening
 }) {
   return (
     <div>
-      <Botones cancionTheDoors={cancionTheDoors} setShuffle={setShuffle} setListening={setListening} />
+      <Botones
+        cancionTheDoors={cancionTheDoors}
+        setShuffle={setShuffle}
+        setListening={setListening}
+        setLoop={setLoop}
+      />
       <ManejadorTiempo />
     </div>
   );
 }
 
-function Botones({ cancionTheDoors, setShuffle, setListening }) {
+function Botones({ cancionTheDoors, setShuffle, setListening, setLoop }) {
   return (
     <div className="grid items-center justify-center grid-cols-5">
       {/* Shuffle */}
@@ -29,7 +35,7 @@ function Botones({ cancionTheDoors, setShuffle, setListening }) {
           }}
           className="flex flex-col items-center hover:text-green-400 text-[20px]"
         >
-          <LuShuffle className="mx-3 text-green-500 cursor-pointer " />
+          <LuShuffle className="mx-2 text-green-500 cursor-pointer " />
           <GoDotFill className="text-[10px] text-green-500" />
         </button>
       ) : (
@@ -39,7 +45,7 @@ function Botones({ cancionTheDoors, setShuffle, setListening }) {
           }}
           className="flex flex-col items-center hover:text-gray-200 text-[20px]"
         >
-          <LuShuffle className="mx-3 cursor-pointer" />
+          <LuShuffle className="mx-2 cursor-pointer" />
         </button>
       )}
       {/* Left */}
@@ -48,11 +54,10 @@ function Botones({ cancionTheDoors, setShuffle, setListening }) {
           setShuffle(false);
         }}
       >
-        <FaBackwardStep className="mx-3  text-[25px] text-gray-300 hover:text-white" />
+        <FaBackwardStep className="mx-2  text-[25px] text-gray-300 hover:text-white" />
       </button>
       {/* Pause */}
-      
-      
+
       {cancionTheDoors.listening ? (
         <button
           onClick={() => {
@@ -60,7 +65,7 @@ function Botones({ cancionTheDoors, setShuffle, setListening }) {
           }}
           className="flex flex-col items-center text-[20px]"
         >
-          <FaPauseCircle className="mx-3 cursor-pointer text-[40px] " />
+          <FaPauseCircle className="mx-2 cursor-pointer text-[40px] " />
         </button>
       ) : (
         <button
@@ -69,16 +74,23 @@ function Botones({ cancionTheDoors, setShuffle, setListening }) {
           }}
           className="flex flex-col items-center hover:text-gray-200 text-[20px]"
         >
-          <FaPlayCircle className="mx-3 cursor-pointer text-[40px]" />
+          <FaPlayCircle className="mx-2 cursor-pointer text-[40px]" />
         </button>
       )}
       {/* Right */}
       <button>
-        <FaBackwardStep className="mx-3 rotate-180  text-[25px] text-gray-300 hover:text-white" />
+        <FaBackwardStep className="mx-2 rotate-180  text-[25px] text-gray-300 hover:text-white" />
       </button>
       {/* Loop */}
-      <button>
-        <BsArrowRepeat className="mx-3 cursor-pointer text-[20px]" />
+      <button
+        onClick={() => {
+          setLoop(!cancionTheDoors.loop); // Cambiar el estado de loop al hacer clic
+        }}
+        className={`flex flex-col items-center text-[20px] ${
+          cancionTheDoors.loop ? 'text-green-500' : 'text-gray-400'
+        }`}
+      >
+        <BsArrowRepeat className="mx-2 cursor-pointer text-[20px]" />
       </button>
     </div>
   );
