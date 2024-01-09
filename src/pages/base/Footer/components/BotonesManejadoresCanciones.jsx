@@ -4,13 +4,13 @@ import { FaBackwardStep } from 'react-icons/fa6';
 import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
 import { BsArrowRepeat } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
-
 function BotonesManejadoresCanciones({
   cancionTheDoors,
   setShuffle,
   setLoop,
   setListening
 }) {
+    
   return (
     <div>
       <Botones
