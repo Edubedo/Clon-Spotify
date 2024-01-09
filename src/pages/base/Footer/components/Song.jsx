@@ -26,7 +26,7 @@ function Song({cancionTheDoors, setLike}) {
                   setLike(false); // Actualizar el estado de like a false
                 }}
               >
-                <FaCheckCircle className="text-green-400 text-[18px] ml-6 cursor-pointer" />
+                <FaCheckCircle className="text-green-400 text-[21px] ml-6 cursor-pointer" />
               </button>
             ) : (
               <button

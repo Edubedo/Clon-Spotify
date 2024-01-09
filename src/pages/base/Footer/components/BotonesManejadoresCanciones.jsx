@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { LuShuffle } from 'react-icons/lu';
 import { FaBackwardStep } from 'react-icons/fa6';
 import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
 import { BsArrowRepeat } from 'react-icons/bs';
 import { GoDotFill } from 'react-icons/go';
+import ReactAudioPlayer from 'react-audio-player';
 
 function BotonesManejadoresCanciones({
   cancionTheDoors,
@@ -11,15 +12,30 @@ function BotonesManejadoresCanciones({
   setLoop,
   setListening
 }) {
+  const [currentTime, setCurrentTime] = useState(0); // Estado para el tiempo actual de la canción
+
+  const handleListen = e => {
+    setCurrentTime(e.target.currentTime);
+  };
+
+  // Eliminar el listener al desmontar el componente
+
   return (
     <div>
+      <ReactAudioPlayer
+        src={cancionTheDoors.mp3}
+        autoPlay={false}
+        controls={false}
+        listenInterval={1000}
+        onListen={handleListen}
+      />
       <Botones
         cancionTheDoors={cancionTheDoors}
         setShuffle={setShuffle}
         setListening={setListening}
         setLoop={setLoop}
       />
-      <ManejadorTiempo />
+      <ManejadorTiempo currentTime={currentTime} />
     </div>
   );
 }
@@ -96,8 +112,22 @@ function Botones({ cancionTheDoors, setShuffle, setListening, setLoop }) {
   );
 }
 
-function ManejadorTiempo() {
-  return <div>visualizador</div>;
+function ManejadorTiempo({ currentTime }) {
+  // Lógica para mostrar el tiempo de la canción en formato mm:ss
+  const formatTime = time => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
+
+  return (
+    <div className="flex items-center gap-2">
+      <div className='text-[14px] text-[#888]'>{formatTime(currentTime)}</div>
+      <div className="w-[100%] h-2 bg-gray-500 rounded-[10px] hover:bg-green-500"></div>
+      <div className='text-[14px] text-[#888]'>07:30</div>
+    </div>
+  );
 }
 
 export default BotonesManejadoresCanciones;
+
