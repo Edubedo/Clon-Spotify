@@ -7,6 +7,7 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 function Dashboard() {
   return (
+    // PARTE DONDE VA A IR LA CARD PERSONALIZADA
     <div className="w-[100%] h-[60vh] p-4 bg-[#1F1154]">
       <BotonesHeader />
       <h1 className="text-5xl font-bold text-white">Good Afternoon</h1>
