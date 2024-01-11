@@ -2,9 +2,6 @@ import { VscLibrary } from "react-icons/vsc"
 import { AiOutlinePlus } from "react-icons/ai"
 
 const Library = () => {
-    const onClick = () => {
-
-    };
 
     return (
         <div className="flex flex-col">
@@ -15,7 +12,7 @@ const Library = () => {
                         Your Library
                     </p>
                 </div>
-                <AiOutlinePlus onClick={onClick} size={20} className="text-neutral-400 cursor-pointer hover:text-white transition"/>
+                <AiOutlinePlus size={20} className="text-neutral-400 cursor-pointer hover:text-white transition"/>
             </div>
             <div className="flex flex-col gap-y-2 mt-4 px-3">
                 Lista de canciones
