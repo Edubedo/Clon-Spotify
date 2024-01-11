@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi'
+import Library from '../../../components/ui/Library';
 
 function AsideIzquierdo () {
   return (
@@ -22,7 +23,7 @@ function AsideIzquierdo () {
           </div>
         </div>
         <div className="bg-neutral-800 rounded-lg overflow-y-auto h-[100vh] text-white">
-          Canciones
+          <Library />
         </div>
 
       </div>
