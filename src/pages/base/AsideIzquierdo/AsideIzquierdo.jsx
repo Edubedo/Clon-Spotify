@@ -1,4 +1,3 @@
-import React, { Children } from 'react';
 import { Link } from 'react-router-dom';
 import { HiHome } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi'
