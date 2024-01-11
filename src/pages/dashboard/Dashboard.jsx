@@ -9,7 +9,7 @@ function Dashboard() {
   return (
     <div className="w-[100%] h-[60vh] p-4 bg-[#1F1154]">
       <BotonesHeader />
-      <h1 className="text-5xl font-bold text-white">Good Afternoons</h1>
+      <h1 className="text-5xl font-bold text-white">Good Afternoon</h1>
       <div className="grid grid-cols-2 gap-6">
         {/* Likes */}
         <CardPersonalizada  image={""} alt={"Likes"} name={"Likes"} tipo={""} route={"/profile/likes"}/>
@@ -68,7 +68,7 @@ function BotonesHeader() {
 function CardPersonalizada({ image, alt, name, tipo, route }) {
   return (
     <Link to={route} className="bg-[#322A53] flex items-center h-[6.7rem] rounded-[10px]">
-      {image} <img
+      <img
         src={image}
         alt={alt}
         className="h-[100%] w-[30%] bg-red-200"
