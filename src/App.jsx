@@ -23,6 +23,7 @@ import Likes from './pages/profile/likes/Likes.jsx'
 import Notifications from './pages/profile/notifications/Notifications.jsx'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/base/Home.jsx';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <AsideIzquierdo />
         <main className="right-0 bg-blue-500 h-[100%]">
           <Routes>
+            <Route element={<Home/>} path="/"></Route>
             {/* Auth */}
             <Route element={<Register/>} path="/auth/register"></Route>
             <Route element={<Login/>} path="/auth/login"></Route>
