@@ -83,7 +83,7 @@ function OneTargetMusic({ image, alt, name, tipo, route }) {
   return (
     <Link
       to={`${route}/${alt}`} // La ruta va ir anidada al alt
-      className="bg-[#322A53] flex items-center h-[4rem] rounded-[10px]"
+      className="bg-[#322A53] flex items-center h-[4rem] rounded-md hover:bg-neutral-100/20 transition"
     >
       <img src={image} alt={alt} className="h-[100%] w-[25%] rounded-md" />
       <div>
