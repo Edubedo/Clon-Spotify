@@ -10,7 +10,7 @@ export default {
         primary: '#1db954',
         secondary: '#1ed760',
         white: '#ffffff',
-        black: '#191414',
+        black: '#000',
       },
       spacing: {
         px: '1px',

@@ -2,7 +2,7 @@ import React from 'react';
 
 function AsideDerecho() {
   return (
-    <aside className="h-[100%] right-0 bg-green-500 ">Aside Derecho</aside>
+    <aside className="h-[100%] right-0  ">Aside Derecho</aside>
   );
 }
 
