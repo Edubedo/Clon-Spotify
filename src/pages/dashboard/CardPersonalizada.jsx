@@ -25,7 +25,7 @@ function CardPersonalizada() {
     <div className=" p-4 bg-[#1F1154]">
       {' '}
       <BotonesHeader />
-      <h1 className="mb-8 text-5xl text-white">{greatDependingHour}</h1>
+      <h1 className="mb-8 text-5xl font-semibold text-white">{greatDependingHour}</h1>
       <div className="grid grid-cols-2 gap-6 2xl:grid-cols-3">
         {/* Likes */}
         <OneTargetMusic
