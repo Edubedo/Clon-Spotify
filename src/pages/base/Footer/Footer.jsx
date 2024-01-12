@@ -53,6 +53,7 @@ function Footer() {
         <DetailsSong
           cancionTheDoors={cancionTheDoors}
           setDisplayVideo={setDisplayVideo}
+          setPlayingVideo={setPlayingVideo}
           setLyrics={setLyrics}
           setQueue={setQueue}
           setDevice={setDevice}

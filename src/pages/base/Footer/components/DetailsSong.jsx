@@ -13,6 +13,7 @@ import { MdOpenInFull } from 'react-icons/md';
 function DetailsSong({
   setDisplayVideo,
   setLyrics,
+  setPlayingVideo,
   setQueue,
   setDevice,
   setSound,
@@ -20,23 +21,20 @@ function DetailsSong({
   cancionTheDoors
 }) {
   return (
-    <div className="flex gap-3 text-[20px]">
-      <button
-        onClick={
-          cancionTheDoors.playingVideo
-            ? setDisplayVideo(fal)
-            : setDisplayVideo(true)
-        }
-      >
-        {cancionTheDoors.playingVideo ? (
-          <div>
+    <div className="flex gap-3 text-[20px] items-center">
+      <button onClick={() => {
+        setDisplayVideo(!cancionTheDoors.displayVideo)
+      }}>
+        {cancionTheDoors.displayVideo ? (
+          <div className='text-green-600'>
             <MdOutlineVideoLibrary />
-            <GoDotFill />
+            <GoDotFill className='translate-y'/>
           </div>
         ) : (
           <MdOutlineVideoLibrary />
         )}
       </button>
+
       <button>
         <LuMic2 />
       </button>
