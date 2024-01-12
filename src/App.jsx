@@ -31,7 +31,7 @@ function App() {
       {/* PRIVATE ROUTES */}
       <Header />
       <div
-        className="grid gap-3 bg-black"
+        className="grid gap-1 bg-black"
         style={{ gridTemplateColumns: '1fr 2fr 1fr' }}
       >
         <AsideIzquierdo />
