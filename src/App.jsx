@@ -31,11 +31,11 @@ function App() {
       {/* PRIVATE ROUTES */}
       <Header />
       <div
-        className="grid gap-1 bg-black"
+        className="grid h-full gap-1 bg-black"
         style={{ gridTemplateColumns: '1fr 2fr 1fr' }}
       >
         <AsideIzquierdo />
-        <main className="right-0  h-[100%]  rounded-[30px] bg-[#000]">
+        <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-hidden hover:overflow-scroll">
           <Routes>
             <Route element={<Home />} path="/"></Route>
             {/* Auth */}
