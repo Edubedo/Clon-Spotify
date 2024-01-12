@@ -30,7 +30,7 @@ function App() {
     <BrowserRouter>
       {/* PRIVATE ROUTES */}
       <Header />
-      <div className="grid gap-2 " style={{gridTemplateColumns: '1fr 2fr 1fr'}}>
+      <div className="bg-black grid gap-2 " style={{gridTemplateColumns: '1fr 2fr 1fr'}}>
         <AsideIzquierdo />
         <main className="right-0 bg-blue-500 h-[100%]">
           <Routes>
