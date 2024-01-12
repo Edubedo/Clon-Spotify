@@ -50,7 +50,7 @@ function OneTargetMusic({ image, alt, name, tipo, route }) {
         to={route}
         className="flex items-center h-[4rem] rounded-[10px] hover:bg-neutral-100/5 transition"
       >
-        <img src={image} alt={alt} className="h-[100%] w-[15%]"/>
+        <img src={image} alt={alt} className="h-[100%] w-[15%] rounded-md"/>
         <div>
           <div>
             <h3 className="px-4 font-bold text-white text-1xl p">{name}</h3>
