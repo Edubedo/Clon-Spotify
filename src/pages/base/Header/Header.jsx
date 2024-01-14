@@ -5,9 +5,9 @@ import CardDesplegadaHeader from './components/CardDesplegadaHeader';
 function Header() {
   const [openButtonOptions, setOpenButtonOptions] = useState(false);
   return (
-    <header className="bg-[#000] pl-3 text-[20px] sticky top-0 [grid-area:header] flex items-center  h-8">
+    <header className="bg-[#000] pl-3 text-[40px] sticky top-0 [grid-area:header] flex items-center  h-1">
       <button
-        className=""
+        className="mt-8"
         name="Boton para desplegar cada  de ayuda"
         onClick={() => {
           setOpenButtonOptions(!openButtonOptions);

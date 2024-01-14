@@ -36,12 +36,12 @@ function App() {
           gridTemplateAreas: `"header header header"
                         "aside main main"
                         "player player player"`,
-          gridTemplateColumns: '450px 1fr',
+          gridTemplateColumns: '470px 1fr',
           gridTemplateRows: '1fr auto'
         }}
       >
         <AsideIzquierdo />
-        <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-scroll [grid-area:main] flex flex-col">
+        <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
           <Routes>
             <Route element={<Home />} path="/"></Route>
             {/* Auth */}

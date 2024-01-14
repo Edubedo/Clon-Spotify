@@ -7,7 +7,7 @@ function AsideIzquierdo () {
   return (
 
     
-    <div className='h-screen overflow-auto [grid-area:aside] flex flex-col'>
+    <div className='h-screen overflow-y-auto overflow-x-hidden [grid-area:aside] flex flex-col'>
       <div className='sm:flex flex-col gap-y-2 bg-black h-full w-[470px] p-2'>
         <div className="w-full text-white rounded-lg bg-neutral-800 h-fit">
           <div className='flex flex-col px-5 py-4 gap-y-4'>
