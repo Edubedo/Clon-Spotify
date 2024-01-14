@@ -38,7 +38,7 @@ function Footer() {
     screen: screen // Usar el estado local para manejar el like/dislike
   };
   return (
-    <footer className="bottom-0 z-[200] sticky bottom-0 left-0 w-full h-20 bg-principal-4 p-3 bg-[#030202] w-[100%]">
+    <footer className="bottom-0 z-[200] sticky bottom-0 left-0 w-full h-20 bg-principal-4 p-3 bg-[#030202] w-[100%] overflow-auto [grid-area:player] flex flex-col">
       <div className="flex items-center justify-between text-white h-[100%] p-2">
         {/* Song */}
         <Song cancionTheDoors={cancionTheDoors} setLike={setLike} />

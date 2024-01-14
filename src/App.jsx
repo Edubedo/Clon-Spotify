@@ -32,10 +32,16 @@ function App() {
       <Header />
       <div
         className="grid h-full gap-1 bg-black"
-        style={{ gridTemplateColumns: '1fr 2fr 1fr' }}
+        style={{
+          gridTemplateAreas: `"header header header"
+                        "aside main main"
+                        "player player player"`,
+          gridTemplateColumns: '450px 1fr',
+          gridTemplateRows: '1fr auto'
+        }}
       >
         <AsideIzquierdo />
-        <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-hidden hover:overflow-scroll">
+        <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-scroll [grid-area:main] flex flex-col">
           <Routes>
             <Route element={<Home />} path="/"></Route>
             {/* Auth */}
