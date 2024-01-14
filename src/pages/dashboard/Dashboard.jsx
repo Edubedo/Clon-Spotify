@@ -15,21 +15,29 @@ function Dashboard() {
           {
             img: LikedSongs,
             title: 'Liked Songs',
+            alt: 'Liked Songs',
+            route: 'Liked Songs',
             subtitle: '730 songs'
           },
           {
             img: imgGustavoCeratiRadio,
             title: 'Gustavo Cerati Radio',
+            alt: 'Gustavo Cerati Radio',
+            route: 'Gustavo Cerati Radio',
             subtitle: 'With Luis Alberto Spinneta, Charly García,...'
           },
           {
             img: imgBeethoven,
             title: 'Oudwig van Beethoven',
+            alt: 'Oudwig van Beethoven',
+            route: 'Oudwig van Beethoven',
             subtitle: 'Artist'
           },
           {
             img: imgGustavoCeratiMix,
             title: 'Gustavo Cerati Mix',
+            alt: 'Gustavo Cerati Mix',
+            route: 'Gustavo Cerati Mix',
             subtitle: 'Soda Stereo, El mató a un Policita Motorizado and...'
           }
         ]}
