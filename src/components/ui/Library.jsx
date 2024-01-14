@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 // Imagenes
 import imgLikedSongs from '../../assets/images/album/liked_songs.jpg';
 import imgTheDoors from '../../assets/images/album/theDoors2.jpg';
+import imgNevermind from '../../assets/images/album/nevermind.png';
+import imgGustavoCerati from '../../assets/images/album/gustavo_cerati.jpg';
+import imgOkComputer from '../../assets/images/album/OkComputer.jpg';
+import imgLoveless from '../../assets/images/album/loveless.jpg';
+import imgAM from '../../assets/images/album/AM.jpg';
+import imgParachute from '../../assets/images/album/Parachute.jpg';
 
 const Library = () => {
 
@@ -33,9 +39,58 @@ const Library = () => {
                 image={imgTheDoors}
                 alt={'The Doors'}
                 name={'The Doors'}
-                tipo={'Album'}
+                tipo={'Album • The Doors'}
                 route={'/dashboard/playlist/the_doors_exitos/'}
                 />
+                <div className="h-[10px]"></div>
+                <OneTargetMusic
+                image={imgNevermind}
+                alt={'Nevermind'}
+                name={'Nevermind'}
+                tipo={'Album • Nirvana'}
+                route={'/dashboard/playlist/nevermind_nirvana/'}
+                />
+                <div className="h-[10px]"></div>
+                <OneTargetMusic
+                image={imgGustavoCerati}
+                alt={'Cerati'}
+                name={'Gustavo Cerati Mix'}
+                tipo={'Mix'}
+                route={'/dashboard/playlist/'}
+                />
+                <div className="h-[10px]"></div>
+                <OneTargetMusic
+                image={imgOkComputer}
+                alt={'Ok Computer'}
+                name={'Ok Computer'}
+                tipo={'Album • Radiohead'}
+                route={'/dashboard/playlist/'}
+                />
+                <div className="h-[10px]"></div>
+                <OneTargetMusic
+                image={imgLoveless}
+                alt={'Loveless'}
+                name={'Loveless'}
+                tipo={'Album • My Bloody Valentine'}
+                route={'/dashboard/playlist/'}
+                />
+                <div className="h-[10px]"></div>
+                <OneTargetMusic
+                image={imgAM}
+                alt={'AM'}
+                name={'AM'}
+                tipo={'Album • Arctic Monkeys'}
+                route={'/dashboard/playlist/'}
+                />
+                <div className="h-[10px]"></div>
+                <OneTargetMusic
+                image={imgParachute}
+                alt={'Parachutes'}
+                name={'Parachutes'}
+                tipo={'Album • Coldplay'}
+                route={'/dashboard/playlist/'}
+                />
+
 
                 
                 </div>
