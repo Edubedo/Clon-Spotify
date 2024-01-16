@@ -25,50 +25,55 @@ import Notifications from './pages/profile/notifications/Notifications.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/base/Home.jsx';
 
+import {LibraryProvider, useLibrary} from './context/LibraryOpenClose.jsx';
+
 function App() {
+
   return (
-    <BrowserRouter>
-      {/* PRIVATE ROUTES */}
-      <Header />
-      <div
-        className="grid h-full gap-1 bg-black"
-        style={{
-          gridTemplateAreas: `"header header header"
+    <LibraryProvider>
+      <BrowserRouter>
+        {/* PRIVATE ROUTES */}
+        <Header />
+        <div
+          className="grid h-full gap-1 bg-black"
+          style={{
+            gridTemplateAreas: `"header header header"
                         "aside main main"
                         "player player player"`,
-          gridTemplateColumns: '470px 1fr',
-          gridTemplateRows: '1fr auto'
-        }}
-      >
-        <AsideIzquierdo />
-        <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
-          <Routes>
-            <Route element={<Home />} path="/"></Route>
-            {/* Auth */}
-            <Route element={<Register />} path="/auth/register"></Route>
-            <Route element={<Login />} path="/auth/login"></Route>
-            <Route element={<Restore />} path="/auth/restore"></Route>
-            <Route element={<Success />} path="/auth/success"></Route>
+            gridTemplateRows: '1fr auto'
+          }}
+        >
+          <AsideIzquierdo />
+          <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
+            <Routes>
+              <Route element={<Error404 />} path="*"></Route>
 
-            {/* Profile  */}
-            <Route element={<Profile />} path="/profile"></Route>
-            <Route element={<Settings />} path="/profile/settings"></Route>
-            <Route element={<Likes />} path="/profile/likes"></Route>
-            <Route
-              element={<Notifications />}
-              path="/profile/notifications"
-            ></Route>
+              <Route element={<Home />} path="/"></Route>
+              {/* Auth */}
+              <Route element={<Register />} path="/auth/register"></Route>
+              <Route element={<Login />} path="/auth/login"></Route>
+              <Route element={<Restore />} path="/auth/restore"></Route>
+              <Route element={<Success />} path="/auth/success"></Route>
 
-            {/* Dashboard */}
-            <Route element={<Dashboard />} path="/dashboard"></Route>
-            <Route element={<Playlist />} path="/dashboard/playlist"></Route>
-            <Route element={<Error404 />} path="*"></Route>
-          </Routes>
-        </main>
-        <AsideDerecho />
-      </div>
-      <Footer />
-    </BrowserRouter>
+              {/* Profile  */}
+              <Route element={<Profile />} path="/profile"></Route>
+              <Route element={<Settings />} path="/profile/settings"></Route>
+              <Route element={<Likes />} path="/profile/likes"></Route>
+              <Route
+                element={<Notifications />}
+                path="/profile/notifications"
+              ></Route>
+
+              {/* Dashboard */}
+              <Route element={<Dashboard />} path="/dashboard"></Route>
+              <Route element={<Playlist />} path="/dashboard/playlist"></Route>
+            </Routes>
+          </main>
+          <AsideDerecho />
+        </div>
+        <Footer />
+      </BrowserRouter>
+    </LibraryProvider>
   );
 }
 
