@@ -17,12 +17,20 @@ function AsideIzquierdo() {
         <div className="w-full text-white rounded-lg bg-neutral-800 h-fit">
           <div className="flex flex-col px-5 py-4 gap-y-4">
             <div className="flex flex-row items-center w-full h-auto py-1 font-medium transition cursor-pointer gap-x-4 text-md hover:text-white text-neutral-400">
-              <HiHome className="text-[40px] mr-5" />
-              <Link to={'/dashboard'}>Home</Link>
+              <Link to={'/dashboard'}>
+                <div className="flex items-center ">
+                  <HiHome className="text-[40px] mr-8" />
+                  <p>Home</p>
+                </div>
+              </Link>
             </div>
             <div className="flex flex-row items-center w-full h-auto py-1 font-medium transition cursor-pointer gap-x-4 text-md hover:text-white text-neutral-400">
-              <BiSearch className="text-[40px] mr-5" />
-              <Link>Search</Link>
+              <Link to={'/dashboard/:search'}>
+                <div className="flex">
+                  <BiSearch className="text-[40px] mr-8 items-center" />
+                  <p>Search</p>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
