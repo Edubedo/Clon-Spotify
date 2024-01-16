@@ -21,8 +21,16 @@ function Notifications() {
             </button>
           </div>
           <div>
-          <h3 className="text-[1.6rem] font-bold mt-5">Earlier</h3>
-          <Notification img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          <h3 className="text-[1.6rem] font-bold my-8">Earlier</h3>
+          
+          
+          <Notification route="artist/:lex_fridman" img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          <Notification route="artist/:lex_fridman" img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          <Notification route="artist/:lex_fridman" img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          <Notification route="artist/:lex_fridman" img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          <Notification route="artist/:lex_fridman" img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          <Notification route="artist/:lex_fridman" img={LexFriendman} alt={"Episodio 407 lex fridman"} title={"Guillaume Verdon: Beff Jezos, E/acc Movement, Physics, Computation & AGI | Lex Fridman Podcast #407"} artist={"Lex Fridman"} description={"Guillaume Verdon (aka Beff Jezos on Twitter) is a physicist, quantum computing researcher, and founder of e/acc (effective accelerationism) movement."} type={"Episode"} uploadDate={"1 week ago"} duration={"2hr 53 min"}/>
+          
           </div>
         </div>
       </div>

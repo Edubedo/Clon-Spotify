@@ -1,26 +1,52 @@
-import React from 'react'
+import React from 'react';
+import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
+import { IoMdAddCircleOutline } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
-function Notification({img, alt, title, artist, description, type, uploadDate, duration}) {
+function Notification({
+  img,
+  alt,
+  title,
+  artist,
+  description,
+  type,
+  uploadDate,
+  duration,
+  route
+}) {
   return (
-    <div>
-        <div>
-            <img src={img} alt={alt} />
-            <div>
-                <h4>{title}</h4>
-                <h5>{artist}</h5>
-            </div>
+    <Link to={route}>
+      <div className="mb-10">
+        <div className="flex h-full gap-2">
+          <img className="w-[30%] h-[8rem]" src={img} alt={alt} />
+          <div className="items-center h-full">
+            <h4 className="text-[1.2rem]">{title}</h4>
+            <h5 className="text-[1.12rem] text-[#939393] font-semibold">
+              {artist}
+            </h5>
+          </div>
         </div>
-        <p>{description}</p>
-        <div> 
-            <span>{type}</span>
-            <span>{uploadDate}</span>
-            <span>{duration}</span>
+        <p className="text-[1.2rem] text-[#939393] font-semibold mt-2">
+          {description}
+        </p>
+        <div className="text-[1.13rem] my-2">
+          <span>{type}</span>
+          <span> - </span>
+          <span>{uploadDate}</span>
+          <span> - </span>
+          <span>{duration}</span>
         </div>
-        <div>
-
+        <div className='mt-3'>
+          <div className="flex justify-between ">
+            <IoMdAddCircleOutline className="text-2xl" />
+            <FaPlayCircle className="text-3xl" />
+          </div>
         </div>
-    </div>
-  )
+        <br />
+        <div className='h-[1px] bg-gray-100 opacity-40'></div>
+      </div>
+    </Link>
+  );
 }
 
-export default Notification
+export default Notification;
