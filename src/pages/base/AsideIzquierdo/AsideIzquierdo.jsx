@@ -9,7 +9,7 @@ function AsideIzquierdo() {
 
   return (
     <div
-      className={`h-screen overflow-y-auto overflow-x-hidden [grid-area:aside] relative transition-all ${
+      className={`h-screen overflow-x-hidden [grid-area:aside] relative transition-all ${
         isLibraryOpen ? 'w-[400px]' : 'w-[90px]'
       }`}
     >
