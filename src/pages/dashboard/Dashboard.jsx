@@ -6,21 +6,7 @@ import imgGustavoCeratiRadio from '../../assets/images/album/gustavo_cerati_radi
 import imgBeethoven from '../../assets/images/album/Beethoven.jpg';
 import imgGustavoCeratiMix from '../../assets/images/album/gustavo_cerati_mix.jpg';
 function Dashboard() {
-  // useEffect(() => {
-  //   const fetchCallInformationSectionRecomendation = async () => {
-  //     try {
-  //       let reqInformationSectionRecomendation = await fetch(
-  //         process.env.PUBLIC_URL + '/json/informationSectionRecomendation.json'
-  //       );
-  //       let res = await reqInformationSectionRecomendation.json();
-  //       return res;
-  //     } catch (error) {
-  //       console.error('Error fetching JSON:', error);
-  //     }
-  //   };
 
-  //   fetchCallInformationSectionRecomendation()
-  // }, []);
   return (
     // PARTE DONDE VA A IR LA CARD PERSONALIZADA
     <div className="">
