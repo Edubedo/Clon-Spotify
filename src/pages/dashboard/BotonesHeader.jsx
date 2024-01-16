@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function BotonesHeader() {
     return (
       <div>
-        <div className="flex justify-between mb-10 text-white">
+        <div className="flex justify-between p-2 mb-10 text-white">
           <div className="flex gap-5">
             <button className="p-1 scale-125 bg-[#130A32] rounded-full">
               <FaAngleLeft className="text-[25px]  " />

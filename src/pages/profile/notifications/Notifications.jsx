@@ -1,8 +1,11 @@
 import React from 'react'
+import BotonesHeader from '../../dashboard/BotonesHeader'
 
 function Notifications() {
   return (
-    <div>Notifications</div>
+    <div>
+      <BotonesHeader/>
+    </div>
   )
 }
 
