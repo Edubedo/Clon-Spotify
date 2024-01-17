@@ -7,7 +7,7 @@ function MiniCardPlaylists({ arrayInfoSectionRecommendation }) {
       <div className="grid  items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 p-3 overflow-hidden h-[314px] overflow-hidden ">
         {arrayInfoSectionRecommendation.map(recommendation => {
           return (
-            <div className="mb-[100px]">
+            <div className="mb-[100px] ">
               <Link to={recommendation.route} className="">
                 <div className=" bg-[#181818] h-[22rem] py-1 px-2">
                   <div className="overflow-hidden h-[12rem] mt-2 ">
