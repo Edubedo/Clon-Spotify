@@ -17,11 +17,11 @@ function Notification({
   return (
     <Link to={route}>
       <div className="mb-10">
-        <div className="flex h-full gap-2">
-          <img className="w-[30%] h-[8rem]" src={img} alt={alt} />
+        <div className="flex flex-col h-full gap-2 sm:flex-row ">
+          <img className="w-[90%] sm:w-[30%] h-[10rem] xl:h-[12rem]" src={img} alt={alt} />
           <div className="items-center h-full">
-            <h4 className="text-[1.2rem]">{title}</h4>
-            <h5 className="text-[1.12rem] text-[#939393] font-semibold">
+            <h4 className="text-[1.3rem]">{title}</h4>
+            <h5 className="text-[1.15rem] text-[#939393] font-semibold">
               {artist}
             </h5>
           </div>
