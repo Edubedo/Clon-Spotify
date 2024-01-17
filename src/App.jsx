@@ -44,7 +44,7 @@ function App() {
           }}
         >
           <AsideIzquierdo />
-          <main className="mr-10 h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
+          <main className="mr-3 sm:mr-5 h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
             <Routes>
               <Route element={<Error404 />} path="*"></Route>
 
