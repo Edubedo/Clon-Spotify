@@ -21,7 +21,7 @@ function Notification({
           <img className="w-[90%] sm:w-[30%] h-[10rem] xl:h-[12rem]" src={img} alt={alt} />
           <div className="items-center h-full">
             <h4 className="text-[1.3rem]">{title}</h4>
-            <h5 className="text-[1.15rem] text-[#939393] font-semibold">
+            <h5 className="text-[1.20rem] text-[#939393] font-semibold">
               {artist}
             </h5>
           </div>
