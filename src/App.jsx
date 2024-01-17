@@ -75,9 +75,8 @@ function App() {
                 ></Route>
               </Routes>
             </div>
-            <div className="bg-white">e</div>
-          </main>
           <AsideDerecho />
+          </main>
         </div>
         <Footer />
       </BrowserRouter>
