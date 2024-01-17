@@ -14,9 +14,9 @@ function CardPersonalizada() {
   let greatDependingHour;
   if (getCurrentHour > 3 && getCurrentHour < 12) {
     greatDependingHour = 'Good morning';
-  } else if (getCurrentHour >= 12 && getCurrentHour < 20) {
+  } else if (getCurrentHour >= 12 && getCurrentHour < 19) {
     greatDependingHour = 'Good afternoon';
-  } else if (getCurrentHour >= 20 && getCurrentHour <= 23) {
+  } else if (getCurrentHour >= 19 && getCurrentHour <= 23) {
     greatDependingHour = 'Good evening';
   } else {
     greatDependingHour = 'Good day';
@@ -83,9 +83,9 @@ function OneTargetMusic({ image, alt, name, tipo, route }) {
   return (
     <Link
       to={`${route}/${alt}`} // La ruta va ir anidada al alt
-      className="bg-[#322A53] flex items-center h-[8rem] sm:h-[7rem] rounded-md hover:bg-neutral-100/20 transition"
+      className="bg-[#322A53] flex items-center h-[6rem] sm:h-[5rem] rounded-md hover:bg-neutral-100/20 transition"
     >
-      <img src={image} alt={alt} className="h-[100%] w-[35%] rounded-md" />
+      <img src={image} alt={alt} className="h-[100%]  rounded-md object-scale-down" />
       <div>
         <div>
           <h3 className="px-4 font-bold text-white text-[1.5rem] p">{name}</h3>
