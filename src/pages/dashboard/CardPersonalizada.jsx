@@ -26,7 +26,7 @@ function CardPersonalizada() {
       {' '}
       <BotonesHeader />
       <h1 className="mb-8 text-5xl font-semibold text-white">{greatDependingHour}</h1>
-      <div className="grid grid-cols-2 gap-6 2xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {/* Likes */}
         <OneTargetMusic
           image={imgLikedSongs}
@@ -83,13 +83,13 @@ function OneTargetMusic({ image, alt, name, tipo, route }) {
   return (
     <Link
       to={`${route}/${alt}`} // La ruta va ir anidada al alt
-      className="bg-[#322A53] flex items-center h-[4rem] rounded-md hover:bg-neutral-100/20 transition"
+      className="bg-[#322A53] flex items-center h-[8rem] sm:h-[7rem] rounded-md hover:bg-neutral-100/20 transition"
     >
-      <img src={image} alt={alt} className="h-[100%] w-[25%] rounded-md" />
+      <img src={image} alt={alt} className="h-[100%] w-[35%] rounded-md" />
       <div>
         <div>
-          <h3 className="px-4 font-bold text-white text-1xl p">{name}</h3>
-          <h3 className="px-4 text-white text-1xl h3">{tipo}</h3>
+          <h3 className="px-4 font-bold text-white text-[1.5rem] p">{name}</h3>
+          <h3 className="px-4 text-white text-[1.1rem] h3">{tipo}</h3>
         </div>
       </div>
     </Link>
