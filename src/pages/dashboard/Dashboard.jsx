@@ -9,7 +9,7 @@ function Dashboard() {
 
   return (
     // PARTE DONDE VA A IR LA CARD PERSONALIZADA
-    <div className="">
+    <div className="bg-[#121212]">
       <CardPersonalizada />
       <CardDashboardSongs
         arrayInfoSectionRecommendation={[

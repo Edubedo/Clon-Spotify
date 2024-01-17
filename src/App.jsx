@@ -35,7 +35,7 @@ function App() {
         {/* PRIVATE ROUTES */}
         <Header />
         <div
-          className="grid h-full gap-1 bg-black"
+          className="grid h-full bg-black"
           style={{
             gridTemplateAreas: `"header header header"
                         "aside main main"
@@ -44,7 +44,7 @@ function App() {
           }}
         >
           <AsideIzquierdo />
-          <main className="right-0  h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
+          <main className="mr-10 h-screen  rounded-[30px] bg-[#000] overflow-y-auto overflow-x-hidden [grid-area:main] flex flex-col">
             <Routes>
               <Route element={<Error404 />} path="*"></Route>
 
