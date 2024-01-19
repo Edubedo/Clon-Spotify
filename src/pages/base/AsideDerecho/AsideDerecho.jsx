@@ -10,7 +10,7 @@ function AsideDerecho() {
       <Cancion/>
       <About/>
       <Merch/>
-      <Queue/>
+      <Queue/>wdwd
     </aside>
   );
 }
