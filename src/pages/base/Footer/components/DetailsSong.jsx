@@ -10,6 +10,7 @@ import { GoDotFill } from 'react-icons/go';
 
 import { MdOpenInFull } from 'react-icons/md';
 import { useLibraryOpenCloseArtist } from '../../../../context/LibraryOpenCloseArtist';
+import { useLibrary } from '../../../../context/LibraryOpenClose';
 function DetailsSong({
   setDisplayVideo,
   setLyrics,
@@ -20,7 +21,9 @@ function DetailsSong({
   setScreen,
   cancionTheDoors
 }) {
-  const { setIsLibraryArtistOpen } = useLibraryOpenCloseArtist();
+  const { setIsLibraryArtistOpen, isLibraryArtistOpen } = useLibraryOpenCloseArtist();
+  const { setIsLibraryOpen } = useLibrary();
+
   return (
     <div className="flex gap-3 text-[20px] items-center">
       <button
@@ -28,7 +31,7 @@ function DetailsSong({
           setDisplayVideo(!cancionTheDoors.displayVideo);
         }}
       >
-        {cancionTheDoors.displayVideo ? (
+        {isLibraryArtistOpen ? (
           <div
             className="text-green-600"
             onClick={() => {
@@ -42,6 +45,7 @@ function DetailsSong({
           <MdOutlineVideoLibrary
             onClick={() => {
               setIsLibraryArtistOpen(true);
+              setIsLibraryOpen(false);
             }}
           />
         )}

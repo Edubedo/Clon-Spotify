@@ -12,25 +12,31 @@ import imgLoveless from '../../assets/images/album/loveless.jpg';
 import imgAM from '../../assets/images/album/AM.jpg';
 import imgParachute from '../../assets/images/album/Parachute.jpg';
 import { useLibrary } from '../../context/LibraryOpenClose';
-
+import { useLibraryOpenCloseArtist } from '../../context/LibraryOpenCloseArtist';
 const Library = () => {
   const { setIsLibraryOpen, isLibraryOpen } = useLibrary();
+  const { setIsLibraryArtistOpen } = useLibraryOpenCloseArtist();
+
   return (
-    <div className="flex flex-col overflow-y-scroll">
+    <div className="flex flex-col">
       <div className="flex items-center justify-between px-5 pt-4">
         <div className="inline-flex items-center gap-x-2">
           <button
-            className="font-medium text-neutral-400 text-md"
+            className="font-semibold transition cursor-pointer gap-x-4 text-md hover:text-white text-neutral-400"
             onClick={() => {
               {
                 isLibraryOpen
                   ? setIsLibraryOpen(false)
-                  : setIsLibraryOpen(true);
+                  : setIsLibraryOpen(true),
+                  setIsLibraryArtistOpen(false);
               }
             }}
           >
             <div className="flex items-center gap-2">
-              <VscLibrary className="items-center mr-4 text-neutral-400" size={40} />
+              <VscLibrary
+                className="items-center mr-4 text-neutral-400"
+                size={40}
+              />
               <p>Your Library</p>
             </div>
           </button>
