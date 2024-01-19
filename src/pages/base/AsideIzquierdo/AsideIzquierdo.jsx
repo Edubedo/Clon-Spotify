@@ -10,10 +10,10 @@ function AsideIzquierdo() {
   return (
     <div
       className={`h-screen overflow-x-hidden [grid-area:aside] relative transition-all ${
-        isLibraryOpen ? 'w-[400px]' : 'w-[90px]'
+        isLibraryOpen ? 'w-[340px]' : 'w-[76px]'
       }`}
     >
-      <div className="sm:flex flex-col gap-y-2 bg-black h-full w-[430px] p-2">
+      <div className="sm:flex flex-col gap-y-2 bg-black h-full w-[358px] p-1">
         <div className="w-full text-white rounded-lg bg-[#121212] h-fit">
           <div className="flex flex-col px-5 py-4 gap-y-4">
             <div className="flex flex-row items-center w-full h-auto py-1 font-semibold transition cursor-pointer gap-x-4 text-md hover:text-white text-neutral-400">
