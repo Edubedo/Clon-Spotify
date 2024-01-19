@@ -21,66 +21,71 @@ import Profile from './pages/profile/Profile.jsx';
 import Settings from './pages/profile/settings/Settings.jsx';
 import Likes from './pages/profile/likes/Likes.jsx';
 import Notifications from './pages/profile/notifications/Notifications.jsx';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/base/Home.jsx';
 
 import { LibraryProvider, useLibrary } from './context/LibraryOpenClose.jsx';
+import { LibraryArtistProvide } from './context/LibraryOpenCloseArtist.jsx';
 
 function App() {
   return (
-    <LibraryProvider>
-      <BrowserRouter>
-        {/* PRIVATE ROUTES */}
-        <Header />
-        <div
-          className="grid h-full bg-black"
-          style={{
-            gridTemplateAreas: `"header header header"
+    <LibraryArtistProvide>
+      <LibraryProvider>
+        <BrowserRouter>
+          {/* PRIVATE ROUTES */}
+          <Header />
+          <div
+            className="grid h-full bg-black"
+            style={{
+              gridTemplateAreas: `"header header header"
                         "aside main main"
                         "player player player"`,
-            gridTemplateRows: '1fr auto'
-          }}
-        >
-          <AsideIzquierdo />
-          <main
-            className="mx-3 sm:mr-5 h-screen  rounded-[30px] bg-[#000]  [grid-area:main]  grid gap-3"
-            style={{ gridTemplateColumns: '2fr 1fr' }}
+              gridTemplateRows: '1fr auto'
+            }}
           >
-            <div className="overflow-x-hidden overflow-y-auto ">
-              <Routes>
-                <Route element={<Error404 />} path="*"></Route>
+            <AsideIzquierdo />
+            <main
+              className="mx-3 sm:mr-5 h-screen  rounded-[30px] bg-[#000]  [grid-area:main]  grid gap-3"
+              style={{ gridTemplateColumns: '2fr 1fr' }}
+            >
+              <div className="overflow-x-hidden overflow-y-auto ">
+                <Routes>
+                  <Route element={<Error404 />} path="*"></Route>
 
-                <Route element={<Home />} path="/"></Route>
-                {/* Auth */}
-                <Route element={<Register />} path="/auth/register"></Route>
-                <Route element={<Login />} path="/auth/login"></Route>
-                <Route element={<Restore />} path="/auth/restore"></Route>
-                <Route element={<Success />} path="/auth/success"></Route>
+                  <Route element={<Home />} path="/"></Route>
+                  {/* Auth */}
+                  <Route element={<Register />} path="/auth/register"></Route>
+                  <Route element={<Login />} path="/auth/login"></Route>
+                  <Route element={<Restore />} path="/auth/restore"></Route>
+                  <Route element={<Success />} path="/auth/success"></Route>
 
-                {/* Profile  */}
-                <Route element={<Profile />} path="/profile"></Route>
-                <Route element={<Settings />} path="/profile/settings"></Route>
-                <Route element={<Likes />} path="/profile/likes"></Route>
-                <Route
-                  element={<Notifications />}
-                  path="/profile/notifications"
-                ></Route>
+                  {/* Profile  */}
+                  <Route element={<Profile />} path="/profile"></Route>
+                  <Route
+                    element={<Settings />}
+                    path="/profile/settings"
+                  ></Route>
+                  <Route element={<Likes />} path="/profile/likes"></Route>
+                  <Route
+                    element={<Notifications />}
+                    path="/profile/notifications"
+                  ></Route>
 
-                {/* Dashboard */}
-                <Route element={<Dashboard />} path="/dashboard"></Route>
-                <Route
-                  element={<Playlist />}
-                  path="/dashboard/playlist"
-                ></Route>
-              </Routes>
-            </div>
-          <AsideDerecho />
-          </main>
-        </div>
-        <Footer />
-      </BrowserRouter>
-    </LibraryProvider>
+                  {/* Dashboard */}
+                  <Route element={<Dashboard />} path="/dashboard"></Route>
+                  <Route
+                    element={<Playlist />}
+                    path="/dashboard/playlist"
+                  ></Route>
+                </Routes>
+              </div>
+              <AsideDerecho />
+            </main>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </LibraryProvider>
+    </LibraryArtistProvide>
   );
 }
 

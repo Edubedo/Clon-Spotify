@@ -9,7 +9,7 @@ import { GoUnmute } from 'react-icons/go';
 import { GoDotFill } from 'react-icons/go';
 
 import { MdOpenInFull } from 'react-icons/md';
-
+import { useLibraryOpenCloseArtist } from '../../../../context/LibraryOpenCloseArtist';
 function DetailsSong({
   setDisplayVideo,
   setLyrics,
@@ -20,18 +20,30 @@ function DetailsSong({
   setScreen,
   cancionTheDoors
 }) {
+  const { setIsLibraryArtistOpen } = useLibraryOpenCloseArtist();
   return (
     <div className="flex gap-3 text-[20px] items-center">
-      <button onClick={() => {
-        setDisplayVideo(!cancionTheDoors.displayVideo)
-      }}>
+      <button
+        onClick={() => {
+          setDisplayVideo(!cancionTheDoors.displayVideo);
+        }}
+      >
         {cancionTheDoors.displayVideo ? (
-          <div className='text-green-600'>
+          <div
+            className="text-green-600"
+            onClick={() => {
+              setIsLibraryArtistOpen(false);
+            }}
+          >
             <MdOutlineVideoLibrary />
-            <GoDotFill className='translate-y'/>
+            <GoDotFill className="translate-y" />
           </div>
         ) : (
-          <MdOutlineVideoLibrary />
+          <MdOutlineVideoLibrary
+            onClick={() => {
+              setIsLibraryArtistOpen(true);
+            }}
+          />
         )}
       </button>
 
